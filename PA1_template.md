@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 ## Loading and preprocessing the data
 
 ```r
@@ -16,7 +21,7 @@ colnames(daily_steps) <- c("date", "total_steps")
 hist(daily_steps$total_steps)  
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 ```r
 ### Mean      (3a)
@@ -46,7 +51,7 @@ qplot(x = interval, y = mean_steps, data = mean_interval_steps
       , geom="line", stat = "identity")               
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 ```r
 max_mean_steps <- max(mean_interval_steps$mean_steps)
@@ -99,7 +104,7 @@ colnames(daily_steps_v2) <- c("date", "total_steps")
 hist(daily_steps_v2$total_steps)  
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 ### Mean
 
 ```r
@@ -136,7 +141,7 @@ qplot(x = interval, y = mean_steps, data = activity_df
        , facets = DayOrEnd~., geom="line", stat = "identity")  
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 ### Panel plot 2
 
 ```r
@@ -150,4 +155,4 @@ xyplot(activity_df$mean_steps ~ activity_df$interval | activity_df$DayOrEnd,
        })
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
